@@ -19,5 +19,6 @@ int main(void)
     h = createList(numNode);
     aver = calcAverage(h, numNode);
     printf("The average of this class is: %f", aver);
+    splitList(h);
     return (0);
 }
