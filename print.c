@@ -10,8 +10,7 @@ void print_list(student *pointer)
 
     if (pointer == NULL)
     {
-        fprintf(stderr, "Memory allocation failed");
-        exit(1);
+        return;
     }
     while (p != NULL)
     {

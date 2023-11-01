@@ -13,7 +13,7 @@ int main(void)
     if (h == NULL)
     {
         fprintf(stderr, "Memory allocation failed");
-        exit(98);
+        exit(1);
     }
     numNode = getInt("Enter Number of students");
     h = createList(numNode);
