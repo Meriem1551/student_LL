@@ -12,10 +12,10 @@ float calcAverage(student *head, unsigned int num_student)
         sum_averages = 0,
         class_average;
     student *p = head;
-
     while (p != NULL)
     {
         sum_averages += p->average;
+        p = p->next;
     }
     class_average = (float)(sum_averages / num_student);
     return (class_average);

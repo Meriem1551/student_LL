@@ -25,6 +25,6 @@ struct student
 student *createList(unsigned int);
 float calcAverage(student *, unsigned int);
 void splitList(student *);
-void insert_student(student *, int, char *, char *, float);
-void print_lits();
+void insert_student(student **, int, char *, char *, float);
+void print_list();
 #endif

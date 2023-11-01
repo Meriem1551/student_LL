@@ -10,7 +10,7 @@
  * @average: float
  * Return: void
  */
-void insert_student(student *new_head, int id, char *first_name, char *last_name, float average)
+void insert_student(student **new_head, int id, char *first_name, char *last_name, float average)
 {
     student *new = (student *)malloc(sizeof(student));
     if (new == NULL)
@@ -23,11 +23,13 @@ void insert_student(student *new_head, int id, char *first_name, char *last_name
     new->last_name = last_name;
     new->average = average;
     new->next = NULL;
-    if (new_head == NULL)
-        new_head = new;
+    if (*new_head == NULL)
+    {
+        *new_head = new;
+    }
     else
     {
-        student *ptr = new_head;
+        student *ptr = *new_head;
         while (ptr->next != NULL)
         {
             ptr = ptr->next;

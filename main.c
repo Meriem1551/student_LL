@@ -9,7 +9,7 @@ int main(void)
 {
     unsigned int numNode;
     float aver;
-    Student *h = (Student *)malloc(sizeof(Student));
+    student *h = (student *)malloc(sizeof(student));
     if (h == NULL)
     {
         fprintf(stderr, "Memory allocation failed");
@@ -18,7 +18,8 @@ int main(void)
     numNode = getInt("Enter Number of students");
     h = createList(numNode);
     aver = calcAverage(h, numNode);
-    printf("The average of this class is: %f", aver);
+    printf("The average of this class is: %.2f\n", aver);
     splitList(h);
+
     return (0);
 }

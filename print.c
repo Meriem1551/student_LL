@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
 /**
  * print_list - print a list
  * @pointer: pointre to list
@@ -9,6 +7,7 @@
 void print_list(student *pointer)
 {
     student *p = pointer;
+
     if (pointer == NULL)
     {
         fprintf(stderr, "Memory allocation failed");

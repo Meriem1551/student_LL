@@ -9,15 +9,15 @@
 void splitList(student *head)
 {
     student
-        *S,
-        *F,
+        *S = NULL,
+        *F = NULL,
         *tmp = head;
     while (tmp != NULL)
     {
         if (tmp->average < 10)
-            insert_student(F, tmp->id, tmp->first_name, tmp->last_name, tmp->average);
+            insert_student(&F, tmp->id, tmp->first_name, tmp->last_name, tmp->average);
         else
-            insert_student(S, tmp->id, tmp->first_name, tmp->last_name, tmp->average);
+            insert_student(&S, tmp->id, tmp->first_name, tmp->last_name, tmp->average);
         tmp = tmp->next;
     }
     print_list(S);
